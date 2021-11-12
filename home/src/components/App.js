@@ -1,27 +1,60 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import MovieList from "./MovieList";
+import axios from 'axios';
+
 
 class App extends React.Component {
   state = {
     movies: [],
     searchQuery: ""
   };
+  // async componentDidMount(){
+  //    const baseUrl="http://localhost:3002/movies";
+  //    const response = await fetch(baseUrl);
+  //    console.log(response)
+  //    const data=await response.json();
+  //    console.log(data);
+  //    this.setState({movies:data})
+  // }
   async componentDidMount(){
-     const baseUrl="http://localhost:3002/movies";
-     const response = await fetch(baseUrl);
-     console.log(response)
-     const data=await response.json();
-     console.log(data);
-     this.setState({movies:data})
+    const response =await axios.get("http://localhost:3002/movies")
+   // console.log(response)
+    this.setState({movies:response.data})
   }
 
-  deleteMovie = (movie) => {
+  // deleteMovie = (movie) => {
+  //   const newMovieList = this.state.movies.filter(m => m.id !== movie.id);
+  //   this.setState({
+  //     movies: newMovieList,
+  //   });
+  // };
+
+
+  //Fetch Api
+  // deleteMovie = async(movie) => {
+  //   const baseUrl=`http://localhost:3002/movies/${movie.id}`;
+  //   await fetch(baseUrl,{
+  //     method:"DELETE"
+  //   })
+  //   const newMovieList = this.state.movies.filter(m => m.id !== movie.id);
+  //   this.setState({
+  //     movies: newMovieList,
+  //   });
+  // };
+
+//AXIOUS  API
+  deleteMovie = async(movie) => {
+   axios.delete(`http://localhost:3002/movies/${movie.id}`)
+ 
     const newMovieList = this.state.movies.filter(m => m.id !== movie.id);
     this.setState({
       movies: newMovieList,
     });
   };
+
+
+
   SearchMovie=(event)=>{
     // console.log(event.target.value)
 this.setState({searchQuery:event.target.value})

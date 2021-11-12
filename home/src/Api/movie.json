@@ -1,51 +1,11 @@
 {
-    "movies": [
-    {
-      "id": 1,
-      "name": "The Flash",
-      "rating": 8.3,
-      "overwiew": "This film created the 2019 and the best 3 t",
-      "imageurl":
-        "https://upload.wikimedia.org/wikipedia/tr/thumb/4/4e/M%C3%BCsl%C3%BCm_film.jpg/220px-M%C3%BCsl%C3%BCm_film.jpg"
-    },
-    {
-      "id": 2,
-      "name": "The Most Film",
-      "rating": 7.6,
-      "overwiew": "This film created the 2019 and the best film",
-      "imageurl":
-        "https://www.themoviedb.org/t/p/w220_and_h330_face/ir9eyz1mtgsohjvo7UYtqUfFuES.jpg"
-    },
-    {
-      "id": 3,
-      "name": "The Harry Potters",
-      "rating": 6.3,
-      "overwiew": "This film created the 2019 and the best film",
-      "imageurl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRGY9R0deCAkZZ9PemNzl7DZNJWrcUasOhg&usqp=CAU"
-    },
-    {
-      "id": 4,
-      "name": "Loading...",
-      "rating": 8.7,
-      "overwiew": "This film created the 2019 and the best film",
-      "imageurl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm92FD_Q0LmR0g8ZzQcBLkwJLN6BXHBLNkyw&usqp=CAU"
-    },
+  "movies": [
     {
       "id": 5,
       "name": "BEst",
       "rating": 5.6,
       "overwiew": "This film created the 2019 and the best film",
-      "imageurl":
-        "https://filmyfocus.com/wp-content/uploads/2021/09/NET-Movie-Review-and-rating-Eng-1.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Squid Games",
-      "rating": 7.7,
-      "overwiew": "This film created the 2019 and the best film",
-      "imageurl":
-        "https://www.murphysmultiverse.com/wp-content/uploads/2021/09/dlkjflksjfsfs.jpg"
+      "imageurl": "https://filmyfocus.com/wp-content/uploads/2021/09/NET-Movie-Review-and-rating-Eng-1.jpg"
     }
-  ]}
+  ]
+}
