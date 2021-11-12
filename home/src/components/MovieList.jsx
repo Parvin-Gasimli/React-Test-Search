@@ -14,7 +14,7 @@ const MovieList = (props) => {
             <img
               className="card-img-top"
               alt="Sample Movie"
-              src={movie.imageUrl}
+              src={movie.imageurl}
             />
             <div className="card-body"></div>
             <h5 className="card-title"> {movie.name} </h5>
