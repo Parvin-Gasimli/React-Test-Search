@@ -14,11 +14,11 @@ const MovieList = (props) => {
             <img
               className="card-img-top"
               alt="Sample Movie"
-              src={movie.imageurl}
+              src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`}
             />
             <div className="card-body"></div>
-            <h5 className="card-title"> {movie.name} </h5>
-            <p className="card-text">{movie.overwiew}</p>
+            <h5 className="card-title"> {movie.title} </h5>
+            <p className="card-text">{movie.overview}</p>
             <div className="d-flex justify-content-between align-items-center">
               <button
                 onClick={(event) => props.deleteMovieProp(movie)}
@@ -37,7 +37,7 @@ const MovieList = (props) => {
                   }}
                   className=" mb-0 badge badge-info"
                 >
-                  {movie.rating}
+                  {movie.vote_average}
                 </span>
               </h2>
             </div>

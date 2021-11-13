@@ -2,6 +2,8 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import MovieList from "./MovieList";
 import axios from 'axios';
+require('dotenv').config()
+// console.log(process.env.REACT_APP_APi_KEY)
 
 
 class App extends React.Component {
@@ -18,9 +20,9 @@ class App extends React.Component {
   //    this.setState({movies:data})
   // }
   async componentDidMount(){
-    const response =await axios.get("http://localhost:3002/movies")
-   // console.log(response)
-    this.setState({movies:response.data})
+    const response =await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_APi_KEY}&language=en-US&page=1`);
+   console.log(response.data.results)
+    this.setState({movies:response.data.results})
   }
 
   // deleteMovie = (movie) => {
@@ -63,7 +65,7 @@ this.setState({searchQuery:event.target.value})
   render() {
     let filterMovies=this.state.movies.filter(
       (movie)=>{
-        return movie.name.toLowerCase().indexOf(this.state.searchQuery.toLowerCase())!==-1
+        return movie.title.toLowerCase().indexOf(this.state.searchQuery.toLowerCase())!==-1
       }
     )
     return (
